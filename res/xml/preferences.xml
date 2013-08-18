@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <PreferenceCategory android:title="Timings" >
+        <EditTextPreference
+            android:defaultValue="10"
+            android:key="@string/pref_learn_timeout"
+            android:numeric="integer"
+            android:summary="Timeout (in seconds) after code learning is started"
+            android:title="Learning Timeout" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="All off" >
+         <EditTextPreference
+            android:defaultValue="1"
+            android:key="@string/pref_alloff_delayfactor"
+            android:numeric="decimal"
+            android:summary="Delay factor between offcodes (min 0.1, max 1) - decrease for faster sending"
+            android:title="Delay Factor" />
+        <EditTextPreference
+            android:defaultValue="20"
+            android:key="@string/pref_alloff_framediff"
+            android:numeric="integer"
+            android:summary="Frame filter value - increase for less strict duplicate filter"
+            android:title="Frame filter" />
+        <EditTextPreference
+            android:defaultValue="200"
+            android:key="@string/pref_alloff_freqdiff"
+            android:numeric="integer"
+            android:summary="Frame filter value - increase for less strict duplicate filter"
+            android:title="Frequency filter" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Sync" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_startup_sync"
+            android:summary="Synchronize database on startup (download new vendors, models, codes, etc)"
+            android:title="Sync DB on appstart" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="@string/pref_startup_updatecheck"
+            android:summary="Check for new version on startup"
+            android:title="Update Check" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Database" >
+        <Preference
+            android:key="@string/pref_db_purge"
+            android:summary="Deletes all data (except custom layouts, scripts) from the local DB."
+            android:title="Purge local DB" />
+        <Preference
+            android:key="@string/pref_db_export"
+            android:summary="Exports Database to external storage."
+            android:title="Export local DB" />
+        <Preference
+            android:key="@string/pref_db_import"
+            android:summary="Imports Database from external storage"
+            android:title="Import local DB" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

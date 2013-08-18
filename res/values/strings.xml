@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- app name etc -->
+    <string name="app_name">ONEtrtaV2</string>
+
+    <!-- menu actions -->
+    <string name="action_sync">Sync</string>
+    <string name="action_search">Search</string>
+    <string name="action_add">Add</string>
+    <string name="action_test">Test</string>
+    <string name="action_delete">Delete</string>
+    <string name="action_duplicate">Duplicate</string>
+    <string name="action_rename">Rename</string>
+    <string name="action_edit">Edit</string>
+    <string name="action_done">Done</string>
+    <string name="action_assing_code">Assign Code</string>
+    <string name="action_assing_script">Assign Script</string>
+    <string name="action_select_bg">Select Background</string>
+
+    <!-- preference names -->
+    <string name="pref_db_purge">pref_db_purge</string>
+    <string name="pref_db_import">pref_db_import</string>
+    <string name="pref_db_export">pref_db_export</string>
+    <string name="pref_learn_timeout">pref_learn_timeout</string>
+    <string name="pref_startup_sync">pref_startup_sync</string>
+    <string name="pref_startup_updatecheck">pref_startup_updatecheck</string>
+    <string name="pref_alloff_freqdiff">pref_alloff_freqdiff</string>
+    <string name="pref_alloff_framediff">pref_alloff_framediff</string>
+    <string name="pref_alloff_delayfactor">pref_alloff_delayfactor</string>
+
+    <!-- preference summarys -->
+    <string name="pref_alloff_framediff_summary">Frame filter value - increase for less strict duplicate filter</string>
+    <string name="pref_alloff_freqdiff_summary">Frequency filter value - increase for less strict duplicate filter</string>
+    <string name="pref_alloff_delayfactor_summary">Delay factor between offcodes (min 0.1, max 1) - decrease for faster sending</string>
+
+
+</resources>

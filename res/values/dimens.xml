@@ -1,0 +1,12 @@
+<resources>
+
+    <!-- Colors -->
+    <color name="white">#FFFFFFFF</color>
+    <color name="black">#FF000000</color>
+    
+    <color name="light_gray">#FFF2F2F2</color>
+    <color name="medium_gray">#FFE0E0E0</color>
+    <color name="dark_gray">#FFA0A0A0</color>
+    
+
+</resources>
