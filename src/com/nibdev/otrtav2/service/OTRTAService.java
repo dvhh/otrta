@@ -136,7 +136,9 @@ public class OTRTAService extends Service{
 		mHandler.removeCallbacksAndMessages(null);
 		mLocalDb.onDestroy();
 		mDb2.onDestroy();
-		mIrInterface.onDestroy();
+		if(mIrInterface != null){
+			mIrInterface.onDestroy();
+		}
 		//Log.i(OTRTAService.class.getSimpleName(), "destroyed");
 		//clear instance
 		_instance = null;
