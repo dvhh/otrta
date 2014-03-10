@@ -1,6 +1,7 @@
 package com.nibdev.otrtav2.service.irinterfaces;
 
 import android.content.Context;
+import android.os.Build;
 import android.os.Vibrator;
 
 import com.htc.htcircontrol.HtcIrData;
@@ -50,27 +51,33 @@ public abstract class IrFace {
 
 		IrFace face = null;
 
+		//HTC
 		if (face == null){
 			try{
 				face = new HtcInfrared(c);
 			}catch (Exception ex){}
 		}
 
+		//Samsung
 		if (face == null){
 			try{
 				face = new SamsungInfrared(c);
 			}catch (Exception ex){}
 		}
 
-
-//		if (face == null){
-//			face = new IrDummy();
-//		}
+		//Universal (KitKat++)
+		if (face == null){
+			if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT){
+				try{
+					face = new KitKatIr(c);
+				}catch (Exception ex){}
+			}
+		}
 
 		if (face != null){
 			face.mVibrator = (Vibrator) c.getSystemService(Context.VIBRATOR_SERVICE);			
 		}
-		
+
 		return face;
 
 	}

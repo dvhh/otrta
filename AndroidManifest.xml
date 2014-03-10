@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.nibdev.otrtav2"
-    android:versionCode="5"
-    android:versionName="0.3.1" >
+    android:versionCode="6"
+    android:versionName="0.4.0" >
 
     <uses-sdk
         android:minSdkVersion="16"
@@ -13,6 +13,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
     <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.TRANSMIT_IR"/>
 
     <application
         android:allowBackup="true"
