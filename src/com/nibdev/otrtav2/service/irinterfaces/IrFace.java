@@ -64,6 +64,13 @@ public abstract class IrFace {
 				face = new SamsungInfrared(c);
 			}catch (Exception ex){}
 		}
+		
+		//LG
+		if (face == null){
+			try{
+				face = new LgInfrared(c);
+			}catch (Exception ex){}
+		}
 
 		//Universal (KitKat++)
 		if (face == null){
