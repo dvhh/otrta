@@ -22,12 +22,15 @@
 -assumenosideeffects class android.util.Log { *; }
 
 -libraryjars /lib/HTCIR.jar
+-libraryjars /lib/QRemoteSDK.jar
 
 -keepattributes Signature
 -keepattributes *Annotation*
 
 -keep class com.htc.** { *; }
 -keep class com.google.** { *; }
+-keep class com.lge.** { *; }
+-keep class com.uei.** { *; }
 
 -keep class com.nibdev.otrtav2.service.IrDataCompat { *; }
 
