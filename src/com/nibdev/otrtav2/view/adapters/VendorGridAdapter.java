@@ -49,7 +49,9 @@ public class VendorGridAdapter extends BaseAdapter implements OnNewLocalDataList
 		mSectionsList = new ArrayList<String>();
 		mSectionsStart = new ArrayList<Integer>();
 		for (int i = 0; i < mVendorData.size(); i++){
-			String vletter = mVendorData.get(i).get(DBLocal.COLUMN_NAME).toString().substring(0, 1).toUpperCase(Locale.ENGLISH);
+			String vletter = mVendorData.get(i).get(DBLocal.COLUMN_NAME).toString();
+			if (vletter == null || vletter.length() < 1) continue;
+			vletter = vletter.substring(0, 1).toUpperCase(Locale.ENGLISH);
 			if (!mSectionsList.contains(vletter)){
 				mSectionsList.add(vletter);
 				mSectionsStart.add(i);
@@ -107,8 +109,8 @@ public class VendorGridAdapter extends BaseAdapter implements OnNewLocalDataList
 
 	@Override
 	public int getSectionForPosition(int position) {
-		String letter = mVendorData.get(position).get(DBLocal.COLUMN_NAME).toString().substring(0, 1).toUpperCase(Locale.ENGLISH);
-		return mSectionsList.indexOf(letter);
+		String letter = mVendorData.get(position).get(DBLocal.COLUMN_NAME).toString();
+		return (letter == null || letter.length() < 1) ? 0 : mSectionsList.indexOf(letter.substring(0, 1).toUpperCase(Locale.ENGLISH));
 	}
 
 	@Override
