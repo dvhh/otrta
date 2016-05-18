@@ -113,8 +113,8 @@ public class ServiceData {
 
 	public static JSONObject HttpPostAnswerJsonObject(String url, JSONObject obj) throws ClientProtocolException, IOException, JSONException, HttpException{
 		AndroidHttpClient client = AndroidHttpClient.newInstance(null);
-		client.getParams().setParameter(HttpConnectionParams.CONNECTION_TIMEOUT, 10000);
-		client.getParams().setParameter(HttpConnectionParams.SO_TIMEOUT, 10000);
+		client.getParams().setParameter(HttpConnectionParams.CONNECTION_TIMEOUT, 60000);
+		client.getParams().setParameter(HttpConnectionParams.SO_TIMEOUT, 60000);
 		HttpPost httpPost = new HttpPost(url);
 		httpPost.setEntity(new StringEntity(obj.toString()));
 		httpPost.setHeader("Accept", "application/json");
